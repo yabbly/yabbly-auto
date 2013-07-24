@@ -2,26 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78ebb922-687f-4d36-a834-4d64c58179a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/icon-small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.manifest" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon.dev.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/yabbly.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MockData.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller.js" afterPath="$PROJECT_DIR$/Controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View.js" afterPath="$PROJECT_DIR$/View.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.manifest" afterPath="$PROJECT_DIR$/app.manifest" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/yabbly.css" afterPath="$PROJECT_DIR$/css/yabbly.css" />
     </list>
     <ignored path="yabbly-auto.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374640987548" ignored="false" />
-    <file path="/app.manifest" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374645598417" ignored="false" />
+    <file path="/app.manifest" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374650242296" ignored="false" />
     <file path="/VIew.js" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374648304370" ignored="false" />
-    <file path="/yabbly.css" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374648724428" ignored="false" />
-    <file path="/Controller.js" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374648103401" ignored="false" />
+    <file path="/yabbly.css" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374653000881" ignored="false" />
+    <file path="/Controller.js" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374649941513" ignored="false" />
+    <file path="/MockData.js" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374653238147" ignored="false" />
+    <file path="/template.html" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374651592590" ignored="false" />
+    <file path="/View.js" changelist="78ebb922-687f-4d36-a834-4d64c58179a4" time="1374653479007" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +39,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="74" selection-start="99" selection-end="99" vertical-scroll-proportion="0.09168082">
+            <state line="3" column="74" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -53,7 +51,7 @@
       <file leaf-file-name="app.manifest" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.manifest">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="44" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+            <state line="6" column="38" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,7 +60,16 @@
       <file leaf-file-name="Controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="427" selection-end="440" vertical-scroll-proportion="0.0">
+            <state line="33" column="22" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MockData.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MockData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="48" selection-start="2454" selection-end="2454" vertical-scroll-proportion="-8.725491">
               <folding />
             </state>
           </provider>
@@ -71,7 +78,25 @@
       <file leaf-file-name="yabbly.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/yabbly.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="17" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
+            <state line="85" column="21" selection-start="1558" selection-end="1558" vertical-scroll-proportion="-3.8823528">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="6" selection-start="184" selection-end="184" vertical-scroll-proportion="-2.6666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/View.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="130" column="47" selection-start="5608" selection-end="5608" vertical-scroll-proportion="0.8556876">
               <folding />
             </state>
           </provider>
@@ -95,10 +120,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app.manifest" />
-        <option value="$PROJECT_DIR$/Controller.js" />
         <option value="$PROJECT_DIR$/VIew.js" />
+        <option value="$PROJECT_DIR$/Controller.js" />
+        <option value="$PROJECT_DIR$/app.manifest" />
+        <option value="$PROJECT_DIR$/template.html" />
         <option value="$PROJECT_DIR$/css/yabbly.css" />
+        <option value="$PROJECT_DIR$/MockData.js" />
+        <option value="$PROJECT_DIR$/View.js" />
       </list>
     </option>
   </component>
@@ -266,30 +294,51 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Controller.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="427" selection-end="440" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/yabbly.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="17" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
+        <state line="3" column="74" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.manifest">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="44" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+        <state line="6" column="38" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/Controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="74" selection-start="99" selection-end="99" vertical-scroll-proportion="0.09168082">
+        <state line="33" column="22" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="184" selection-end="184" vertical-scroll-proportion="-2.6666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/yabbly.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="21" selection-start="1558" selection-end="1558" vertical-scroll-proportion="-3.8823528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MockData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="48" selection-start="2454" selection-end="2454" vertical-scroll-proportion="-8.725491">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="47" selection-start="5608" selection-end="5608" vertical-scroll-proportion="0.8556876">
           <folding />
         </state>
       </provider>

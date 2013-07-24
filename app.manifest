@@ -4,5 +4,6 @@
     "css"           : "css/yabbly.css",
     "categoryId"    : "SOCIAL",
     "view"          : "View.js",
-    "controller"    : "Controller.js"
+    "controller"    : "Controller.js",
+    "template"      : "template.html"
 }
