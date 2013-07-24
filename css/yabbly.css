@@ -12,6 +12,10 @@ body.oc-module-view {
 .oc-breadcrumb span {
   padding-left: 50px;
   background: transparent url(../img/icon-small.png) no-repeat scroll 4px 4px;
+  box-shadow: none;
+  font-family: 'Myriad Pro';
+  font-weight: bold;
+  margin-right: 0;
 }
 
 @font-face {
@@ -26,31 +30,68 @@ body.oc-module-view {
 }
 
 .icon,
-.response-count {
-  float: right;
+.response-count,
+.helpful-count {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 100ms linear;
+  top: 50%;
+  right: 50px;
+}
+
+.icon,
+.icon-font {
+  font-family: 'yabbly-icons';
 }
 
 .icon {
-  font-family: 'yabbly-icons';
+  font-size: 142px;
   float: right;
+  text-shadow: none;
+  line-height: 1;
+  margin-top: -71px;
 }
 
-.response-count {
-  border-radius: 18px;
-  line-height: 36px;
+  .selected .icon,
+  .selected .response-count,
+  .selected .helpful-count {
+    opacity: 1;
+  }
+
+.response-count,
+.helpful-count {
+  border-radius: 8px;
+  line-height: 72px;
   text-align: center;
-  width: 36px;
+  width: 72px;
   background-color: #fff;
   color: #001f2c;
-  font-size: 0.5em;
-  display: inline-block;
-  vertical-align: middle;
+  font-size: 1em;
   font-weight: bold;
-  margin: 7px 0;
+  margin-top: -36px;
+  text-shadow: none;
+  right: 100px;
 }
 
-.selected .response-count {
-  margin: 22px 0;
+.helpful-count {
+  width: auto;
+  background-color: #001f2c;
+  color: #fff;
+  padding: 0 52px 0 20px;
+  -webkit-transition: background-color 200ms linear;
+}
+
+.is-helpful .helpful-count {
+  background-color: #e85a1f;
+}
+
+.helpful-count .icon-font {
+  font-size: 52px;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  margin-top: -26px;
+  right: 11px;
 }
 
 #view-container {
@@ -78,8 +119,23 @@ body.oc-module-view {
   left: 100%;
 }
 
-#question-detail-view .oc-listview li {
-  padding-left: 100px;
+#question-detail-view .oc-listview li .text {
+  margin-right: 225px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+}
+
+#question-detail-view .oc-listview li .username {
+  display: inline-block;
+  margin-right: 12px;
+  background-color: #001f2c;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 0.7em;
+  line-height: 2;
+  text-shadow: none;
 }
 
 #question-detail-view .oc-listview li img {
@@ -94,7 +150,5 @@ body.oc-module-view {
 }
 
 .oc-listview li {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  position: relative;
 }

@@ -43,11 +43,43 @@ define(function(require) {
         ListItemView,
         {
             _generateElement : function($super) {
-                var li = document.createElement('li'),
-                    img = document.createElement('img');
-                img.src = this.model.get('src');
-                li.appendChild(img);
-                li.appendChild(document.createTextNode(this.model.get('text')));
+                var helpfulSpan, helpfulCount, thumbsUp, icon, username,
+                    text    = document.createElement('span'),
+                    li      = document.createElement('li');
+
+                if(typeof this.model.get('username') !== 'undefined') {
+                    username = document.createElement('span');
+                    username.className = 'username';
+                    username.textContent = this.model.get('username') + ':';
+                    text.appendChild(username);
+                }
+
+                text.appendChild(document.createTextNode(this.model.get('text')));
+                text.className = 'text';
+                li.appendChild(text);
+                if(typeof this.model.get('helpfulCount') !== 'undefined') {
+
+                    helpfulSpan = document.createElement('span');
+                    helpfulSpan.className = 'helpful-count';
+
+                    helpfulCount = document.createElement('span');
+                    helpfulCount.className = 'helpful-count-value';
+                    helpfulCount.textContent = this.model.get('helpfulCount');
+
+                    helpfulSpan.appendChild(helpfulCount);
+
+                    thumbsUp = document.createElement('span');
+                    thumbsUp.className = 'icon-font';
+                    thumbsUp.textContent = 't';
+                    helpfulSpan.appendChild(thumbsUp);
+
+                    li.appendChild(helpfulSpan);
+                } else {
+                    icon = document.createElement('span');
+                    icon.textContent = 'q';
+                    icon.className = 'icon';
+                    li.appendChild(icon);
+                }
                 return li;
             }
         }
@@ -67,7 +99,6 @@ define(function(require) {
                 var self = this,
                     viewContainer = document.getElementById('view-container');
 
-
                 this.menuItems  = new ArrayList(BASE_MENU_ITEMS);
 
                 // Our list of menu items / questions
@@ -75,7 +106,7 @@ define(function(require) {
                     id                  : 'list-questions',
                     arrayList           : this.menuItems,
                     listItemViewType    : MenuItemView,
-                    itemClick           : function(listItem, menuItem) {
+                    itemClick           : function(list, menuItem) {
                         // If we're clicking a question, go to the question detail view
                         if(typeof menuItem.get('responseCount') !== 'undefined') {
 
@@ -85,8 +116,7 @@ define(function(require) {
                             // Add the question
                             self.questionDetails.push(
                                 new Model({
-                                    text : 'Q: ' + menuItem.get('body'),
-                                    src : menuItem.get('user').imageUrl
+                                    text : menuItem.get('body')
                                 })
                             );
 
@@ -94,8 +124,9 @@ define(function(require) {
                             menuItem.get('responses').forEach(function(response) {
                                 self.questionDetails.push(
                                     new Model({
-                                        text : '@' + response.user.name + ': ' + response.body,
-                                        src : response.user.imageUrl
+                                        text : response.body,
+                                        username : '@' + response.user.name,
+                                        helpfulCount : response.helpfulCount
                                     })
                                 );
                             });
@@ -128,6 +159,22 @@ define(function(require) {
                 this.listQuestionDetails = new ListView({
                         focusable           : false,
                         arrayList           : this.questionDetails,
+                        itemClick           : function(list, detail) {
+                            var isHelpful,
+                                helpfulCount,
+                                listItem = list.getSelectedElement();
+                            if(typeof detail.get('helpfulCount') !== 'undefined') {
+                                isHelpful = listItem.className.indexOf('is-helpful') !== -1;
+                                helpfulCount = listItem.querySelector('.helpful-count-value');
+                                if(isHelpful) {
+                                    listItem.className = listItem.className.replace('is-helpful', '');
+                                    helpfulCount.textContent = parseInt(helpfulCount.textContent, 10) - 1;
+                                } else {
+                                    listItem.className += ' is-helpful';
+                                    helpfulCount.textContent = parseInt(helpfulCount.textContent, 10) + 1;
+                                }
+                            }
+                        },
                         listItemViewType    : QuestionDetailItemView
                     })
                     .render(document.getElementById('question-detail-view'))
