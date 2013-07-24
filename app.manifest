@@ -1,0 +1,8 @@
+{
+    "id"            : "yabbly",
+    "name"          : "Yabbly",
+    "css"           : "css/yabbly.css",
+    "categoryId"    : "SOCIAL",
+    "view"          : "View.js",
+    "controller"    : "Controller.js"
+}
