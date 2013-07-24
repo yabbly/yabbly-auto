@@ -15,13 +15,6 @@ define(function(require) {
         ListItemView = require('common/ui/ListItemView'),
         ModuleView = require('common/platform/ModuleView');
 
-    var MenuItem = Class.create(
-        Model,
-        {
-            // Nothing special here (yet!)
-        }
-    );
-
     var MenuItemView = Class.create(
         ListItemView,
         {
@@ -58,7 +51,7 @@ define(function(require) {
     );
 
     const BASE_MENU_ITEMS = [
-        new MenuItem({ text: 'Ask a Question' })
+        new Model({ text: 'Ask a Question' })
     ];
 
     return Class.create(
@@ -136,7 +129,7 @@ define(function(require) {
                 var self = this;
                 questions.forEach(function(question) {
                     self.menuItems.push(
-                        new MenuItem({
+                        new Model({
                             text : question.title,
                             body : question.body,
                             responses : question.responses,
