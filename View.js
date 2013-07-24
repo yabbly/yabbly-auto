@@ -108,7 +108,7 @@ define(function(require) {
                                 DOMHelper.addSingleTransitionEndEventListener(
                                     viewContainer,
                                     function() {
-                                        self.getBreadcrumb().set('subtitle', 'Question Details');
+                                        self.getBreadcrumb().set('subtitle', menuItem.get('text'));
                                         self.menu.setFocusable(false);
                                         self.listQuestionDetails.setFocusable(true).focus();
                                     },
